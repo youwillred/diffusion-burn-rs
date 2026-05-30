@@ -1,0 +1,44 @@
+[package]
+name = "diffusion-burn-rs"
+version = "0.1.0"
+edition = "2024"
+default-run = "diffusion-burn-rs"
+
+[dependencies]
+burn = { version = "0.20", features = ["wgpu", "ndarray", "dataset", "vision", "train", "autodiff"] }
+rand = "0.10.1"
+serde = { version = "1.0", features = ["derive"] }
+image = "0.25"
+anyhow = "1.0.102"
+walkdir = "2.4"
+csv = "1.3"
+tokio = { version = "1.0", features = ["rt"] }
+serde_json = "1.0.149"
+
+[lib]
+name = "diffusion_burn_rs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "diffusion-burn-rs"
+path = "src/main.rs"
+
+[[example]]
+name = "train_with_text"
+path = "examples/train_with_text.rs"
+
+[[example]]
+name = "test_model"
+path = "examples/test_model.rs"
+
+[[example]]
+name = "test_csv_data"
+path = "examples/test_csv_data.rs"
+
+[[example]]
+name = "debug_data"
+path = "examples/debug_data.rs"
+
+[[example]]
+name = "test_study"
+path = "examples/test_study.rs"

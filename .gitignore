@@ -1,0 +1,7 @@
+checkpoints/
+target/
+input/cifar10_train/
+input/*.py
+
+*.Zone.Identifier
+input/cats/
