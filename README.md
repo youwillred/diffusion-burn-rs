@@ -17,32 +17,32 @@
 
 ### 1. 环境准备
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup default nightly
+`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+`rustup default nightly`
 
 ### 2. 克隆项目
 
-git clone https://github.com/youwillred/diffusion-burn-rs.git
-cd diffusion-burn-rs
-unzip input/cifar10_train.zip -d input/
+`git clone https://github.com/youwillred/diffusion-burn-rs.git`
+`cd diffusion-burn-rs`
+`unzip input/cifar10_train.zip -d input/`
 
 ### 3. 运行训练
 
-cargo run --example train_with_text --release
+`cargo run --example train_with_text --release`
 
 训练输出示例：
 
-✅ 加载 100 张图片，10 个类别
-Epoch 1: Avg Loss = 0.809446
-Epoch 2: Avg Loss = 0.373010
-✅ 模型已保存到 checkpoints/diffusion.mpk
-✅ 图片已保存为 sample_0.png / sample_1.png
+`✅ 加载 100 张图片，10 个类别`
+`Epoch 1: Avg Loss = 0.809446`
+`Epoch 2: Avg Loss = 0.373010`
+`✅ 模型已保存到 checkpoints/diffusion.mpk`
+`✅ 图片已保存为 sample_0.png / sample_1.png`
 
 ## 命令大全
 
-cargo run --example train_with_text : 完整训练（推荐）
-cargo run --example test_model : 测试已训练模型
-cargo run --example test_csv_data : 验证数据加载
+`cargo run --example train_with_text : 完整训练（推荐）`
+`cargo run --example test_model : 测试已训练模型`
+`cargo run --example test_csv_data : 验证数据加载`
 
 ## 许可证
 
